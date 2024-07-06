@@ -13,6 +13,7 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  padding: 10px;
 }
 
 .background-object {
@@ -37,11 +38,9 @@ body {
   height: 400px;
   top: 60%;
   left: 43%;
-  background: linear-gradient(#f0f, #2196f3 );
+  background: linear-gradient(#f0f, #2196f3);
   animation-delay: 2s;
 }
-
-
 
 .background-object:nth-child(3) {
   width: 300px;
@@ -70,14 +69,14 @@ body {
   backdrop-filter: blur(10px);
   z-index: 10;
   color: #fff;
-  width: 67%;
+  width: 80%;
 }
-
-
-
 
 .buttons {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .startButton {
@@ -87,7 +86,6 @@ body {
   padding: 12px 20px;
   font-size: 18px;
   cursor: pointer;
-  margin-right: 10px;
   border-radius: 25px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -106,4 +104,77 @@ body {
 #score, #mistakes {
   margin-top: 20px;
   color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .background-object:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    left: 5%;
+  }
+
+  .background-object:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 43%;
+  }
+
+  .background-object:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 35%;
+    left: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-object:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: 5%;
+    left: 5%;
+  }
+
+  .background-object:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 43%;
+  }
+
+  .background-object:nth-child(3) {
+    width: 75px;
+    height: 75px;
+    top: 35%;
+    left: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .startButton {
+    margin-right: 10px;
+  }
+
+  .startButton:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main_div {
+    width: 60%;
+  }
+
+  .startButton {
+    padding: 15px 25px;
+    font-size: 20px;
+  }
 }
